@@ -1,0 +1,42 @@
+<html>
+	<head>
+		
+		<style>
+			
+			table{
+			
+			
+			border: 3px solid black;
+			width: 30%;
+			
+			} 
+			
+			th,td{
+				border: 3px solid black;
+				padding: 8px;
+				text-align: left;
+			}
+			
+			</style>
+		
+		</head>
+	
+	<body>
+		<table>
+				<tr>
+					<th>PID</th>
+					<th>PNAME</th>
+					<th>PRICE</th>
+					
+				</tr>
+					
+				<tr th:each="product:${products}" >
+					<td th:text="${product.pid}" ></td>
+					<td th:text="${product.pname}" ></td>
+					<td th:text="${product.price}"></td>
+				</tr>
+			
+			</table>
+			
+		</body>
+	</html>
